@@ -1,4 +1,4 @@
-var elixir = require('laravel-elixir');
+ var elixir = require('laravel-elixir');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +12,9 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    // Use of Less: will search for 'resources/assets/less/app.less'
+    //mix.less('app.less');
+
+    mix.sass('app.scss', './public/css/app.css')
+        .sass('front.scss', './public/css/front.css');
 });
