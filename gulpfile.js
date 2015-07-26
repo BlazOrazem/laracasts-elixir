@@ -16,5 +16,7 @@ elixir(function(mix) {
     //mix.less('app.less');
 
     mix.sass('app.scss', './public/css/app.css')
-        .sass('front.scss', './public/css/front.css');
+        .sass('front.scss', './public/css/front.css')
+        .coffee('module.coffee')
+        .babel('file.js');
 });
